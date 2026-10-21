@@ -65,5 +65,6 @@
 | B2 | TC-12 fresh evidence | ✅ **DONE 21 Oct** — pre/post DOM + PNG |
 | B3 | Lighthouse score measure (T7) | ⬜ Pending |
 | B4 | Deploy to Netlify/Vercel (T10) | ✅ **DONE 21 Oct** — **Firebase Hosting** live: `https://blogging-5760b.web.app` (SPA rewrite + cache headers; home/deep-link/images `200`) |
+| B5 | Source code GitHub pe push | ✅ **DONE 21 Oct** — repo `jyotiparasher1985/blogging-` (main, commit `ec7c061`, 62 files; docs + Evidence included) |
 
-**Bottom line:** G 13/13 ✅ · P 4/4 ✅ · T 9/10 ✅ · TC 17/17 ✅ evidence complete · Bugs 2/2 fixed · **LIVE on Firebase Hosting** · Pending: sirf B3 (Lighthouse).
+**Bottom line:** G 13/13 ✅ · P 4/4 ✅ · T 9/10 ✅ · TC 17/17 ✅ evidence complete · Bugs 2/2 fixed · **LIVE on Firebase** + **GitHub repo pushed** · Pending: sirf B3 (Lighthouse).
