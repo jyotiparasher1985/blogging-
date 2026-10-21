@@ -1,0 +1,116 @@
+{
+  "project": "blogging-5760b",
+  "createdAt": "2026-10-21T14:10:03.645Z",
+  "method": "firebase-tools OAuth (cloud-platform scope) → Firestore REST v1 + Firebase Storage v0 / GCS JSON API",
+  "firestore": {
+    "database": "projects/blogging-5760b/databases/(default)",
+    "location": "asia-south1",
+    "collections": {
+      "site": 1,
+      "posts": 9,
+      "filters": 6,
+      "latest": 5,
+      "platforms": 17,
+      "quick_picks": 4,
+      "faqs": 4,
+      "citations": 10,
+      "news_source": 1,
+      "news": 6
+    },
+    "totalDocs": 63,
+    "written": 63,
+    "failures": [],
+    "verify": {
+      "path": "posts/best-blogging-platforms-2026",
+      "status": 200,
+      "titleMatches": true
+    },
+    "consoleUrl": "https://console.firebase.google.com/project/blogging-5760b/firestore/databases/-default-/data"
+  },
+  "storage": {
+    "bucket": "blogging-5760b.firebasestorage.app",
+    "bucketStatus": "blocked (GCS route: 403 The billing account for the owning project is disabled in state absent)",
+    "rules": {
+      "attempted": true,
+      "ok": true,
+      "ruleset": "projects/blogging-5760b/rulesets/678a3ce5-7213-4f62-b1ca-02ad43726d37",
+      "release": "firebase.storage"
+    },
+    "files": [
+      {
+        "name": "img/ai-abstract.jpg",
+        "size": 546457,
+        "md5": "414711e3f57df9db2d544c3a40e5a0c1",
+        "ok": false,
+        "status": 404,
+        "downloadUrl": null
+      },
+      {
+        "name": "img/dev-laptop.jpg",
+        "size": 122436,
+        "md5": "c59b85d786e3e5753268354fb07da764",
+        "ok": false,
+        "status": 404,
+        "downloadUrl": null
+      },
+      {
+        "name": "img/ghost-newsletters.jpg",
+        "size": 167049,
+        "md5": "c7650e5957aeb8b5ce2fd260f92feeac",
+        "ok": false,
+        "status": 404,
+        "downloadUrl": null
+      },
+      {
+        "name": "img/headlines-paper.jpg",
+        "size": 108301,
+        "md5": "ec416e967e7f75846cfbd6c9a3e4a288",
+        "ok": false,
+        "status": 404,
+        "downloadUrl": null
+      },
+      {
+        "name": "img/memberships-business.jpg",
+        "size": 135050,
+        "md5": "4fc21888f0f8094a2b0c975f51a01991",
+        "ok": false,
+        "status": 404,
+        "downloadUrl": null
+      },
+      {
+        "name": "img/niches-analytics.jpg",
+        "size": 181499,
+        "md5": "5bf1cf4d050fd42b185f22f9b2693c46",
+        "ok": false,
+        "status": 404,
+        "downloadUrl": null
+      },
+      {
+        "name": "img/platforms-writing.jpg",
+        "size": 113093,
+        "md5": "17add77d70092928ce1af666c504e230",
+        "ok": false,
+        "status": 404,
+        "downloadUrl": null
+      },
+      {
+        "name": "img/seo-dashboard.jpg",
+        "size": 120511,
+        "md5": "2224bd1d293dd43b8d18520a9bfa23f1",
+        "ok": false,
+        "status": 404,
+        "downloadUrl": null
+      },
+      {
+        "name": "img/wordpress-code.jpg",
+        "size": 152137,
+        "md5": "94afe2f5fdc0c72b715afada3cef0480",
+        "ok": false,
+        "status": 404,
+        "downloadUrl": null
+      }
+    ],
+    "verify": null,
+    "consoleUrl": "https://console.firebase.google.com/project/blogging-5760b/storage"
+  }
+}

@@ -184,6 +184,19 @@
 | **Result** | ✅ PASS (21 Oct 2026, production :4173) |
 | **License note** | Unsplash License: reproduction, modification aur commercial use allowed without permission; attribution appreciated but not required — credit README + yahan recorded |
 
+## TC-18 — Firebase Migration: Firestore Data + Storage Images
+
+| Field | Detail |
+|---|---|
+| **Requirement** | RFP G14 — data Firestore me, images Storage me |
+| **Setup** | Firestore DB create (CLI, `(default)` @ `asia-south1`) · `scripts/seed-firebase.mjs` (firebase-tools OAuth, cloud-platform scope) |
+| **Steps** | 1. `posts.js` data import (ESM) → 2. 63 docs PATCH (REST v1, chunks of 8) → 3. Storage bucket detect/create (2 routes) → 4. 9 images upload → 5. public-read rules release → 6. fetch-back verify |
+| **Firestore Result** | ✅ **PASS (21 Oct 2026)** — 63/63 docs written; verify GET `posts/best-blogging-platforms-2026` → 200 + title match |
+| **Storage Result** | ⚠️ **BLOCKED (plan policy)** — bucket create 403 "billing account... state absent" (no-cost Spark plan me naye buckets allowed nahi — Google policy). Rules public-read **released** ✅ — bucket banne par turant kaam karega |
+| **Fix path** | Console → Billing → Blaze upgrade → `node scripts/seed-firebase.mjs` re-run (bucket + upload auto) |
+| **Evidence** | `Evidence/firebase-migration.json` (full dump: collections, counts, verify, upload attempts, rules) |
+| **Bug found+fixed** | Run-1 me 63×400 (double-wrapped fields) → fix: top-level object unwrap → run-2 me 63/63 ✅ |
+
 ## Traceability Matrix (Requirement → Task Case)
 
 | RFP Requirement | RFP Section | Task Case |
@@ -208,7 +221,8 @@
 | Top News hero banner (headline links) | G12 | TC-15 |
 | Daily headlines refresh + IP/attribution rule | G12 | TC-16 |
 | License-free self-hosted images (all slots) | G13 | TC-17 |
+| Firebase content mirror (Firestore + Storage) | G14 | TC-18 |
 
 ---
 
-**Change Log:** v1.0 — initial 14 task cases + traceability vs RFP. v1.1 — TC-15 (Top News hero banner), TC-16 (daily refresh policy) added; traceability updated. v1.2 — TC-17 (license-free self-hosted imagery, G13) added; traceability updated. v1.3 — bug-fix battery: TC-10 me dark-mode announce/footer fix (`--navy` variable) + TC-12 fresh evidence added. v1.4 — TC-14 LIVE deploy evidence (Firebase Hosting `blogging-5760b`).
+**Change Log:** v1.0 — initial 14 task cases + traceability vs RFP. v1.1 — TC-15 (Top News hero banner), TC-16 (daily refresh policy) added; traceability updated. v1.2 — TC-17 (license-free self-hosted imagery, G13) added; traceability updated. v1.3 — bug-fix battery: TC-10 me dark-mode announce/footer fix (`--navy` variable) + TC-12 fresh evidence added. v1.4 — TC-14 LIVE deploy evidence (Firebase Hosting `blogging-5760b`). v1.5 — TC-18 (Firebase migration: Firestore 63/63 ✅, Storage plan-blocked ⚠) added.
