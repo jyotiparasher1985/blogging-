@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — NewsScope</title>
+  <meta name="description" content="Every guide, analysis and comparison from the NewsScope desk — filter by topic." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Announcement -->
+  <div class="announce">📣 <strong>New:</strong> Our 2026 blogging platform deep-dive is live — <a href="article.html"><u>read the full comparison →</u></a></div>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span id="topbar-date">Loading date…</span>
+      </div>
+      <div class="topbar-right">
+        <a href="#">Facebook</a><a href="#">X</a><a href="#">Instagram</a><a href="#">YouTube</a>
+        <span><span class="blink-dot"></span> LIVE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Masthead -->
+  <header class="masthead container">
+    <div class="masthead-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">N</span>
+        <span>
+          <span class="logo-name">News<em>Scope</em></span>
+          <span class="logo-tag">Insight · Analysis · Stories</span>
+        </span>
+      </a>
+      <div class="masthead-actions">
+        <button class="icon-btn" id="search-toggle" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <a class="btn btn-primary" href="#subscribe"><span>Daily Briefing</span> ✉</a>
+      </div>
+      <div class="search-pop" id="search-pop">
+        <input type="search" placeholder="Search stories, articles, reports…" aria-label="Search" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Nav -->
+  <nav class="nav-bar" id="nav-bar" aria-label="Main">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="blog.html">Blog</a>
+        <a class="nav-link" href="article.html">Platforms</a>
+        <a class="nav-link" href="blog.html">Technology</a>
+        <a class="nav-link" href="blog.html">Business</a>
+        <a class="nav-link" href="blog.html">AI &amp; Creators</a>
+        <a class="nav-link" href="blog.html">Marketing</a>
+        <a class="nav-link" href="blog.html">Lifestyle</a>
+        <span class="nav-live"><span class="blink-dot"></span> Breaking</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- Page head -->
+    <div class="page-head">
+      <span class="kicker kicker-accent">The NewsScope Desk</span>
+      <h1>Every guide, in one place.</h1>
+      <p>Comparisons, tool reviews and analysis for writers and publishers. Filter by topic below.</p>
+    </div>
+
+    <!-- Category filter chips -->
+    <div class="chips" role="tablist" aria-label="Filter posts by topic">
+      <button class="chip active" data-filter="all">All Posts</button>
+      <button class="chip" data-filter="platforms">Platforms</button>
+      <button class="chip" data-filter="seo">SEO &amp; Marketing</button>
+      <button class="chip" data-filter="ai">AI Tools</button>
+      <button class="chip" data-filter="money">Monetization</button>
+      <button class="chip" data-filter="tech">Dev &amp; Tech</button>
+    </div>
+
+    <!-- Blog grid -->
+    <div class="blog-grid">
+
+      <article class="card blog-card" data-cat="platforms">
+        <div class="card-media ph ph-2" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg></div>
+        <div class="card-body">
+          <span class="kicker kicker-accent">Platforms · Guide</span>
+          <h3><a href="article.html">The 17 Best Blogging Platforms of 2026: Ranked, Scored and Compared</a></h3>
+          <p>Our flagship comparison: 11 criteria, real pricing, a verdict table and full source citations.</p>
+          <div class="meta-row"><span>By NewsScope Desk</span><span class="dot-sep">20 Oct 2026</span><span class="dot-sep">11 min</span></div>
+        </div>
+      </article>
+
+      <article class="card blog-card" data-cat="platforms">
+        <div class="card-media ph ph-6" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></div>
+        <div class="card-body">
+          <span class="kicker kicker-primary">Platforms</span>
+          <h3><a href="article.html">WordPress.org vs WordPress.com: same name, different game</a></h3>
+          <p>The hosted and self-hosted versions share a brand and almost nothing else. Here's how to choose.</p>
+          <div class="meta-row"><span>By Rohit Aryan</span><span class="dot-sep">16 Oct 2026</span><span class="dot-sep">6 min</span></div>
+        </div>
+      </article>
+
+      <article class="card blog-card" data-cat="money">
+        <div class="card-media ph ph-3" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M15 9.5A2.5 2.5 0 0 0 12 8c-1.4 0-2.5.9-2.5 2S10.6 12 12 12s2.5.9 2.5 2-1.1 2-2.5 2a2.5 2.5 0 0 1-3-2.2M12 6v2m0 8v2"/></svg></div>
+        <div class="card-body">
+          <span class="kicker kicker-green">Monetization</span>
+          <h3><a href="article.html">Paid memberships vs ads vs affiliate links: the honest math for 2026</a></h3>
+          <p>Three monetization paths, tracked over a year on a mid-size blog. The multiplier nobody expects.</p>
+          <div class="meta-row"><span>By Ardna Sood</span><span class="dot-sep">15 Oct 2026</span><span class="dot-sep">9 min</span></div>
+        </div>
+      </article>
+
+      <article class="card blog-card" data-cat="ai">
+        <div class="card-media ph ph-4" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l2.2 5.6L20 11l-5.8 2.4L12 19l-2.2-5.6L4 11l5.8-2.4z"/></svg></div>
+        <div class="card-body">
+          <span class="kicker kicker-violet">AI Tools</span>
+          <h3><a href="article.html">Five AI site builders prompted with the same blog brief — side by side</a></h3>
+          <p>We asked identical questions of five builders. Output structure, tone and layout compared.</p>
+          <div class="meta-row"><span>By Pooja Malhotra</span><span class="dot-sep">12 Oct 2026</span><span class="dot-sep">7 min</span></div>
+        </div>
+      </article>
+
+      <article class="card blog-card" data-cat="seo">
+        <div class="card-media ph ph-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="10" cy="10" r="6"/><path d="m20 20-5.5-5.5"/></svg></div>
+        <div class="card-body">
+          <span class="kicker kicker-primary">SEO &amp; Marketing</span>
+          <h3><a href="article.html">SEO after AI answers: a publishing playbook for the zero-click era</a></h3>
+          <p>Search behaves differently when an engine answers before a reader clicks. What still works.</p>
+          <div class="meta-row"><span>By Kabir Menon</span><span class="dot-sep">10 Oct 2026</span><span class="dot-sep">10 min</span></div>
+        </div>
+      </article>
+
+      <article class="card blog-card" data-cat="tech">
+        <div class="card-media ph ph-8" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m8 8-4 4 4 4m8-8 4 4-4 4"/></svg></div>
+        <div class="card-body">
+          <span class="kicker kicker-primary">Dev &amp; Tech</span>
+          <h3><a href="article.html">Ship your blog for free: GitHub Pages, Netlify and Vercel compared</a></h3>
+          <p>Three free deployment paths for a static site — limits, domains and build times, tested.</p>
+          <div class="meta-row"><span>By Meera Kulkarni</span><span class="dot-sep">08 Oct 2026</span><span class="dot-sep">6 min</span></div>
+        </div>
+      </article>
+
+      <article class="card blog-card" data-cat="platforms">
+        <div class="card-media ph ph-7" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 18v-6a8 8 0 0 1 16 0v6"/><path d="M20 19a2 2 0 0 1-2 2h-2v-6h4zM4 19a2 2 0 0 0 2 2h2v-6H4z"/></svg></div>
+        <div class="card-body">
+          <span class="kicker kicker-accent">Platforms</span>
+          <h3><a href="article.html">Ghost vs Substack for newsletters: where each one wins</a></h3>
+          <p>Two publishing philosophies, one job: get your words into inboxes and get paid for it.</p>
+          <div class="meta-row"><span>By Rohit Aryan</span><span class="dot-sep">05 Oct 2026</span><span class="dot-sep">8 min</span></div>
+        </div>
+      </article>
+
+      <article class="card blog-card" data-cat="money">
+        <div class="card-media ph ph-9" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12a9 9 0 0 1 9-9 9 9 0 0 1 0 18 9 9 0 0 1-9-9z"/><path d="M3 12h3m4-9-2 4m9-4 2 4m4 5h-3"/></svg></div>
+        <div class="card-body">
+          <span class="kicker kicker-gold">Monetization</span>
+          <h3><a href="article.html">Nine blog niches, one year of revenue: which niches actually pay</a></h3>
+          <p>Aggregated earnings data across finance, food, travel and more — with the monotonic winner.</p>
+          <div class="meta-row"><span>By Ardna Sood</span><span class="dot-sep">02 Oct 2026</span><span class="dot-sep">9 min</span></div>
+        </div>
+      </article>
+
+      <article class="card blog-card" data-cat="seo">
+        <div class="card-media ph ph-5" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M6 6l1.5 1.5M16.5 16.5 18 18M6 18l1.5-1.5M16.5 7.5 18 6"/></svg></div>
+        <div class="card-body">
+          <span class="kicker kicker-gold">SEO &amp; Marketing</span>
+          <h3><a href="article.html">Headlines that get clicked and shared: patterns from 200 top posts</a></h3>
+          <p>Number-led titles beat questions in search, but not in social. The split strategy explained.</p>
+          <div class="meta-row"><span>By Ira Dutt</span><span class="dot-sep">28 Sep 2026</span><span class="dot-sep">5 min</span></div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Pagination -->
+    <nav class="pager" aria-label="Pagination">
+      <a href="#" aria-label="Previous page">‹</a>
+      <a href="#" class="current">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#" aria-label="Next page">›</a>
+    </nav>
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="subscribe">
+      <div>
+        <h2>Never miss a guide.</h2>
+        <p>Deep dives, comparisons and tool reviews — delivered once a week, readable in five minutes.</p>
+      </div>
+      <div>
+        <form id="nl-form">
+          <input type="email" placeholder="you@example.com" required aria-label="Email address" />
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p class="nl-success">✓ Thanks! Check your inbox to confirm your subscription.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <span class="logo-mark">N</span>
+            <span class="logo-name">News<em>Scope</em></span>
+          </a>
+          <p>An independent portal for technology, business and the creator economy. Built on an original static template — clean, fast and ad-free.</p>
+        </div>
+        <div>
+          <h4>Sections</h4>
+          <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="article.html">Platforms Guide</a></li>
+            <li><a href="blog.html">Technology</a></li>
+            <li><a href="blog.html">Business</a></li>
+            <li><a href="blog.html">AI &amp; Creators</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Editorial Standards</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Advertise</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 NewsScope. An original template by NewsScope Labs — not affiliated with any third-party publisher. All sample content is fictional.</span>
+        <span>Made with curiosity · <a href="index.html" style="color:#fff"><u>Homepage</u></a></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 7-7 7 7M12 5v16"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

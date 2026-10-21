@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output (deploy ke waqt `npm run build` se generate hota hai)
+dist/
+
+# Logs & temp
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Env / secrets
+.env
+.env.*
+
+# Editor
+.vscode/
+.idea/
+
+# Playwright temp artifacts (Evidence/ folder intentionally INCLUDED hai — docs requirement)
+playwright-report/
+test-results/
