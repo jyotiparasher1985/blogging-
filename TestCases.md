@@ -197,6 +197,18 @@
 | **Evidence** | `Evidence/firebase-migration.json` (full dump: collections, counts, verify, upload attempts, rules) |
 | **Bug found+fixed** | Run-1 me 63×400 (double-wrapped fields) → fix: top-level object unwrap → run-2 me 63/63 ✅ |
 
+## TC-19 — Breaking Ticker Daily News (G15)
+
+| Field | Detail |
+|---|---|
+| **Requirement** | RFP G15 — daily breaking news scroll in ticker |
+| **Preconditions** | `NEWS` array me 6 fresh headlines (22 Oct 2026, 07:47 IST fetch) + `NEWS_SOURCE.fetchedAt` updated |
+| **Steps** | 1. `breaking ticker/BreakingTicker.jsx` me `items` ko NEWS objects support karna (string OR {headline,url,time,tag}) → 2. each item `<a target="_blank">` with `time` prefix + `:focus-visible` outline → 3. `Layout.jsx` me `<BreakingTicker items={NEWS} />` → 4. `index.css` me `.ticker-item` styles → 5. build + dev HMR verify |
+| **Expected** | 6 clickable links (`.ticker-item`) render, first href → NDTV article, `aria-hidden` removed (accessible), pause-on-hover + focus outline work |
+| **Evidence** | `Evidence/tc19-pre-ticker.png` (static 4-item ticker, before) · `Evidence/tc19-post-ticker.png` (live 6 breaking headlines, light) · `Evidence/tc19-post-ticker-dark.png` (dark mode) |
+| **Result** | ✅ PASS (22 Oct 2026, dev `:5173`) — DOM-verified: `links: 6`, `firstHref: ndtv.com/...`, `hasTime: true`, `ariaHidden: null` |
+| **IP Rule (G12/G15)** | ❌ NDTV article text/photos copy NAHI · ✅ sirf headline titles + original article links + "via NDTV" credit |
+
 ## Traceability Matrix (Requirement → Task Case)
 
 | RFP Requirement | RFP Section | Task Case |
@@ -222,7 +234,8 @@
 | Daily headlines refresh + IP/attribution rule | G12 | TC-16 |
 | License-free self-hosted images (all slots) | G13 | TC-17 |
 | Firebase content mirror (Firestore + Storage) | G14 | TC-18 |
+| Breaking Ticker daily breaking news (NDTV RSS) | G15 | TC-19 |
 
 ---
 
-**Change Log:** v1.0 — initial 14 task cases + traceability vs RFP. v1.1 — TC-15 (Top News hero banner), TC-16 (daily refresh policy) added; traceability updated. v1.2 — TC-17 (license-free self-hosted imagery, G13) added; traceability updated. v1.3 — bug-fix battery: TC-10 me dark-mode announce/footer fix (`--navy` variable) + TC-12 fresh evidence added. v1.4 — TC-14 LIVE deploy evidence (Firebase Hosting `blogging-5760b`). v1.5 — TC-18 (Firebase migration: Firestore 63/63 ✅, Storage plan-blocked ⚠) added.
+**Change Log:** v1.0 — initial 14 task cases + traceability vs RFP. v1.1 — TC-15 (Top News hero banner), TC-16 (daily refresh policy) added; traceability updated. v1.2 — TC-17 (license-free self-hosted imagery, G13) added; traceability updated. v1.3 — bug-fix battery: TC-10 me dark-mode announce/footer fix (`--navy` variable) + TC-12 fresh evidence added. v1.4 — TC-14 LIVE deploy evidence (Firebase Hosting `blogging-5760b`). v1.5 — TC-18 (Firebase migration: Firestore 63/63 ✅, Storage plan-blocked ⚠) added. v1.6 — TC-19 (Breaking Ticker daily news from NDTV RSS, clickable + IP-safe) added.

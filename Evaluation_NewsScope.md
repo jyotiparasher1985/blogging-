@@ -216,6 +216,26 @@ File: `src/index.css`. Rebuild → 0 warnings, exit 0.
 
 ---
 
+## E12 — Requirement #6: Breaking Ticker Daily News (22 Oct 2026)
+
+**Requirement:** "Breaking Ticker ke naam se folder usme ab kaam karna hai ... Breaking Ticker ... ussme daily breaking news scroll honi chayie"
+
+| Step | Evidence | Result |
+|---|---|---|
+| Pre-change (static ticker) | `Evidence/tc19-pre-ticker.png` — 4 static strings | ✅ captured |
+| RSS fetch (NDTV, 22 Oct 07:47 IST) | 12 items; top 6 picked for ticker (World/India/Tech) | ✅ |
+| Data update | `NEWS_SOURCE.fetchedAt` → "22 Oct 2026 · 07:47 IST"; `NEWS` → 6 fresh headlines (IP-safe: title + link + time only) | ✅ |
+| Component upgrade | `breaking ticker/BreakingTicker.jsx` — string OR `{headline,url,time,tag}` items → clickable `<a target="_blank">` + `<time>` + `:focus-visible` outline; `aria-hidden` removed (accessible) | ✅ |
+| Styling | `index.css` `.ticker-item`, `.ticker-item time`, hover/focus | ✅ |
+| Wiring | `Layout.jsx` → `<BreakingTicker items={NEWS} />` | ✅ |
+| Build | `✓ built in 5.42s` — 49 modules, CSS 21.22 kB | ✅ |
+| DOM verify (dev :5173) | `links: 6`, `firstHref: ndtv.com/...`, `hasTime: true`, `ariaHidden: null` | ✅ |
+| Visual evidence | `Evidence/tc19-post-ticker.png` (light) · `Evidence/tc19-post-ticker-dark.png` (dark) | ✅ |
+
+**IP compliance note (G12/G15):** Sirf headline titles + original NDTV article links + "via NDTV" credit use kiya. NDTV ke article text/photos copy nahi kiye — ticker abhi bhi NewsScope ka apna UI hai.
+
+---
+
 ## Verdict
 
 **PRODUCTION-READY ✅ — LIVE ✅ — OPEN-SOURCE ✅** — build pass, functional battery 11/11, console 0 errors, visual evidence captured.

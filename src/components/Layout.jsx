@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { SITE } from "../data/posts.js";
+import { SITE, NEWS } from "../data/posts.js";
 import TopBar from "../../Top Bar/TopBar.jsx";
 import BreakingTicker from "../../breaking ticker/BreakingTicker.jsx";
 export { default as Ticker } from "../../breaking ticker/BreakingTicker.jsx";
@@ -179,7 +179,7 @@ export default function Layout({ children, dark, setDark }) {
       <TopBar />
       <Masthead />
       <NavBar dark={dark} setDark={setDark} />
-      <BreakingTicker />
+      <BreakingTicker items={NEWS} />
       {children}
       <Newsletter />
       <Footer />

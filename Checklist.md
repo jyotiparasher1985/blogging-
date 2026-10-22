@@ -18,6 +18,8 @@
 | G11 | Back-to-top (600px) | ✅ Done | TC-12 |
 | G12 | Top News Today banner (NDTV RSS, IP-safe) | ✅ Done | TC-15, 16 |
 | G13 | License-free self-hosted images | ✅ Done | TC-17 |
+| G14 | Firebase content backend (mirror) | ✅ Done (Firestore 63/63) | TC-18 |
+| G15 | Breaking Ticker — daily breaking news (NDTV RSS) | ✅ Done | TC-19 |
 
 ## B. Page-level Requirements
 | # | Requirement | Status | Test |
@@ -57,6 +59,8 @@
 | TC-15 | `TC-15_topnews-banner.png` | ✅ |
 | TC-16 | RSS fetch + `NDTV-homepage.pdf` (bot-block docs) | ✅ |
 | TC-17 | `tc17-home-full.jpg` + 3 more | ✅ |
+| TC-18 | `firebase-migration.json` (Firestore 63/63 + verify) | ✅ |
+| TC-19 | `tc19-pre-ticker.png` + `tc19-post-ticker.png` + `tc19-post-ticker-dark.png` | ✅ |
 
 ## E. Bug / Pending Log
 | # | Item | Status |

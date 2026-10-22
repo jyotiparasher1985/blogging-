@@ -13,6 +13,22 @@ const DEFAULT_ITEMS = [
   "All sample content is original — swap in your own stories anytime",
 ];
 
+// Normalize an item into { key, text, url, time, tag }.
+// Supports plain strings (legacy/static) AND NDTV news objects { headline, url, time, tag }.
+function normalize(item, i) {
+  if (typeof item === "string") {
+    return { key: `s-${i}`, text: item, url: null, time: null, tag: null };
+  }
+  const headline = item.headline || item.title || item.text || "";
+  return {
+    key: item.url || `o-${i}`,
+    text: headline,
+    url: item.url || null,
+    time: item.time || null,
+    tag: item.tag || null,
+  };
+}
+
 export default function BreakingTicker({
   items = DEFAULT_ITEMS,
   label = "Breaking",
@@ -20,10 +36,13 @@ export default function BreakingTicker({
   pauseOnHover = true,
 }) {
   // de-duplicate empty entries so the track never looks broken
-  const safeItems = useMemo(() => items.filter((t) => String(t).trim().length > 0), [items]);
+  const safeItems = useMemo(
+    () => items.map(normalize).filter((t) => String(t.text).trim().length > 0),
+    [items]
+  );
 
   return (
-    <div className="ticker" aria-hidden="true">
+    <div className="ticker" role="region" aria-label={`${label} news ticker`}>
       <span className="ticker-label">{label}</span>
       <div className="ticker-viewport">
         <div
@@ -31,8 +50,22 @@ export default function BreakingTicker({
           style={{ animationDuration: `${speed}s` }}
           data-pause={pauseOnHover ? "hover" : "none"}
         >
-          {safeItems.map((t, i) => (
-            <span key={i}>{t}</span>
+          {safeItems.map((t) => (
+            t.url ? (
+              <a
+                key={t.key}
+                href={t.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ticker-item"
+                title={t.tag ? `${t.tag} — ${t.text}` : t.text}
+              >
+                {t.time && <time>{t.time}</time>}
+                <span>{t.text}</span>
+              </a>
+            ) : (
+              <span key={t.key}>{t.text}</span>
+            )
           ))}
         </div>
       </div>

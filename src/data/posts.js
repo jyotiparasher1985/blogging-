@@ -205,38 +205,38 @@ export const NEWS_SOURCE = {
   name: "NDTV",
   siteUrl: "https://www.ndtv.com/",
   feedUrl: "https://feeds.feedburner.com/ndtvnews-top-stories",
-  fetchedAt: "21 Oct 2026 · 15:11 IST",
+  fetchedAt: "22 Oct 2026 · 07:47 IST",
 };
 
 export const NEWS = [
   {
-    headline: "Microsoft India Head To Talk About 'Building New Economy' At NDTV World Summit",
-    url: "https://www.ndtv.com/world-news/microsoft-india-head-to-talk-about-building-new-economy-at-ndtv-world-summit-12205285",
-    time: "15:03", tag: "World Summit", ph: "ph-1",
+    headline: "\"Politics Is Tough Business\": JD Vance On Row Over Vivek Ramaswamy's Controversial Ad On Rival",
+    url: "https://www.ndtv.com/world-news/jd-vance-disgusted-by-republicans-over-vivek-ramaswamys-controversial-ad-12217357",
+    time: "07:25", tag: "World", ph: "ph-1",
   },
   {
-    headline: "World On Track For 2.6 Degrees Celsius Warming This Century: UN",
-    url: "https://www.ndtv.com/environment/world-on-track-for-2-6-degrees-celsius-warming-this-century-un-12213502",
-    time: "14:55", tag: "Climate", ph: "ph-3",
+    headline: "Trump Envoy Calls Putin \"Humanitarian\", Sparks Backlash",
+    url: "https://www.ndtv.com/world-news/trump-envoy-steve-witkoff-calls-putin-humanitarian-sparks-backlash-12217861",
+    time: "07:23", tag: "World", ph: "ph-2",
   },
   {
-    headline: "India To Bring New AI Law? What Top Government Adviser Told NDTV",
-    url: "https://www.ndtv.com/artificial-intelligence/india-to-bring-new-ai-law-what-top-government-adviser-ajay-kumar-sood-told-ndtv-12214525",
-    time: "14:54", tag: "AI Policy", ph: "ph-4",
+    headline: "'Kept Children Addictive On Social Media': Meta Sued In Australia",
+    url: "https://www.ndtv.com/world-news/meta-facebook-instagram-sued-in-australia-kept-children-addictive-on-social-media-12217854",
+    time: "07:21", tag: "Tech", ph: "ph-3",
   },
   {
-    headline: "Income Tax Audit Deadline Today: Check These Forms Before It's Too Late",
-    url: "https://www.ndtv.com/business-news/income-tax-audit-deadline-october-21-today-it-return-cbdt-taxpayer-penalty-12214449",
-    time: "14:51", tag: "Business", ph: "ph-5",
+    headline: "Ladakh Panchayat Polls To Be Held On November 21",
+    url: "https://www.ndtv.com/india-news/ladakh-panchayat-polls-to-be-held-on-november-21-12217846",
+    time: "07:15", tag: "India", ph: "ph-4",
   },
   {
-    headline: "Pinarayi Vijayan Gets 7-Day Relief In Bribery Case, CPI(M), BJP Trade Charges",
-    url: "https://www.ndtv.com/india-news/pinarayi-vijayan-gets-7-day-relief-in-bribery-case-cpi-m-bjp-trade-charges-12214548",
-    time: "14:52", tag: "Politics", ph: "ph-6",
+    headline: "Donald Trump Says \"Much Different Kind\" Of India-US Trade Deal Is \"Pretty Close\"",
+    url: "https://www.ndtv.com/world-news/donald-trump-says-much-different-kind-of-india-us-trade-deal-is-pretty-close-12217827",
+    time: "07:10", tag: "World", ph: "ph-5",
   },
   {
-    headline: "Explosion In Under-Construction Bengaluru Building, Cops Suspect IED Used",
-    url: "https://www.ndtv.com/bangalore-news/bengaluru-building-blast-explosion-in-under-construction-bengaluru-building-cops-suspect-ied-used-12213741",
-    time: "13:09", tag: "India", ph: "ph-8",
+    headline: "X Community Notes Failed To Flag 93% Of US Midterm False Claims: Report",
+    url: "https://www.ndtv.com/world-news/x-community-notes-failed-to-flag-93-of-us-midterm-false-claims-report-12217807",
+    time: "06:57", tag: "Tech", ph: "ph-6",
   },
 ];
