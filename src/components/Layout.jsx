@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { SITE } from "../data/posts.js";
 import TopBar from "../../Top Bar/TopBar.jsx";
+import BreakingTicker from "../../breaking ticker/BreakingTicker.jsx";
+export { default as Ticker } from "../../breaking ticker/BreakingTicker.jsx";
 
 const icons = {
   search: (<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>),
@@ -89,21 +91,7 @@ export function NavBar({ dark, setDark }) {
   );
 }
 
-export function Ticker() {
-  return (
-    <div className="ticker" aria-hidden="true">
-      <span className="ticker-label">Breaking</span>
-      <div className="ticker-viewport">
-        <div className="ticker-track">
-          <span>React + Vite rebuild of the NewsScope template — single-page, client-side routed</span>
-          <span>Dark mode, category filters and reading progress built in — no plugins required</span>
-          <span>Deploy free on GitHub Pages, Netlify or Vercel in minutes</span>
-          <span>All sample content is original — swap in your own stories anytime</span>
-        </div>
-      </div>
-    </div>
-  );
-}
+
 
 export function Newsletter() {
   const [done, setDone] = useState(false);
@@ -191,7 +179,7 @@ export default function Layout({ children, dark, setDark }) {
       <TopBar />
       <Masthead />
       <NavBar dark={dark} setDark={setDark} />
-      <Ticker />
+      <BreakingTicker />
       {children}
       <Newsletter />
       <Footer />

@@ -9,7 +9,7 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 
-const PID = "blogging-5760b";
+const PID = process.argv[2] || "blogging-5760b";
 const HOME = process.env.USERPROFILE || process.env.HOME;
 const cfg = JSON.parse(fs.readFileSync(path.join(HOME, ".config", "configstore", "firebase-tools.json"), "utf8"));
 const TOKEN = cfg.tokens?.access_token;
