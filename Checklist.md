@@ -71,6 +71,6 @@
 | B4 | Deploy to Netlify/Vercel (T10) | ✅ **DONE 21 Oct** — **Firebase Hosting** live: `https://blogging-5760b.web.app` (SPA rewrite + cache headers; home/deep-link/images `200`) |
 | B5 | Source code GitHub pe push | ✅ **DONE 21 Oct** — repo `jyotiparasher1985/blogging-` (main, commit `ec7c061`, 62 files; docs + Evidence included) |
 | B6 | Data → Firestore (63 docs, 10 collections) | ✅ **DONE 21 Oct** — `blogging-5760b` DB `(default)` @ asia-south1; verify GET 200 + title match |
-| B7 | Images → Firebase Storage | ⚠️ **BLOCKED (user action)** — no-cost plan pe naye buckets 403 (billing policy). Console → Blaze upgrade → `node scripts/seed-firebase.mjs` re-run. Public-read rules **released** ✅ ready |
+| B7 | Images → Firebase Storage | ✅ **DONE 22 Oct** — bucket `blogging-5760b.firebasestorage.app` (Blaze) · 9/9 uploaded · public-read rules released · verify HTTP 200 + md5 match |
 
 **Bottom line:** G 13/13 ✅ · P 4/4 ✅ · T 9/10 ✅ · TC 17/17 ✅ evidence complete · Bugs 2/2 fixed · **LIVE on Firebase** + **GitHub repo pushed** · Pending: sirf B3 (Lighthouse).

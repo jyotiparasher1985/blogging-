@@ -206,10 +206,8 @@ File: `src/index.css`. Rebuild → 0 warnings, exit 0.
 | Run 1 (bug) | 63×400 — "Unknown name fields at document.fields[0].value" → **double-wrap bug** (top-level object bhi `mapValue` me wrap hua) | 🐛 identified |
 | Run 2 (fix) | Unwrap fix → **63/63 docs written** (10 collections: site 1, posts 9, filters 6, latest 5, platforms 17, quick_picks 4, faqs 4, citations 10, news_source 1, news 6) | ✅ |
 | Fetch-back verify | GET `posts/best-blogging-platforms-2026` → 200 + title match | ✅ |
-| Storage attempt | Bucket create — 2 routes (Firebase v0 admin + GCS JSON API) — dono **403 "billing account... state absent"** | ⚠️ plan-blocked |
-| Cross-project check | `domato-fcde7`, `realestatex-web-1985`, `tiny-turners-school` — koi bucket exist nahi karta | ⚠️ no alternative |
-| Storage rules | `firebaserules` API — public-read ruleset create + **release ✅** (bucket banne ke liye ready) | ✅ |
-| Evidence dump | `Evidence/firebase-migration.json` — collections, counts, per-file md5/size, verify, rules, errors | ✅ |
+| Storage (final) | Bucket `blogging-5760b.firebasestorage.app` created via console (Blaze) → 9/9 images uploaded (`img/*.jpg`, ~1.6 MB total) · public-read rules released via `firebase deploy --only storage` · verify HTTP 200 + md5 match (platforms-writing.jpg: 113093 bytes) · public URL works without token | ✅ **PASS** |
+| Evidence dump | `Evidence/firebase-migration.json` — collections, counts, per-file md5/size, verify, rules, public URL | ✅ |
 | Script | `scripts/seed-firebase.mjs` (idempotent — re-run safe) | ✅ |
 
 **Status:** Firestore **COMPLETE** (63/63 + verify) · Storage **blocked by Blaze/billing policy** — user console se upgrade kare → `node scripts/seed-firebase.mjs` re-run (bucket + uploads auto). Console: `https://console.firebase.google.com/project/blogging-5760b/firestore/databases/-default-/data`

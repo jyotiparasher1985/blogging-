@@ -192,7 +192,7 @@
 | **Setup** | Firestore DB create (CLI, `(default)` @ `asia-south1`) · `scripts/seed-firebase.mjs` (firebase-tools OAuth, cloud-platform scope) |
 | **Steps** | 1. `posts.js` data import (ESM) → 2. 63 docs PATCH (REST v1, chunks of 8) → 3. Storage bucket detect/create (2 routes) → 4. 9 images upload → 5. public-read rules release → 6. fetch-back verify |
 | **Firestore Result** | ✅ **PASS (21 Oct 2026)** — 63/63 docs written; verify GET `posts/best-blogging-platforms-2026` → 200 + title match |
-| **Storage Result** | ⚠️ **BLOCKED (plan policy)** — bucket create 403 "billing account... state absent" (no-cost Spark plan me naye buckets allowed nahi — Google policy). Rules public-read **released** ✅ — bucket banne par turant kaam karega |
+| **Storage Result** | ✅ **PASS (22 Oct 2026)** — bucket `blogging-5760b.firebasestorage.app` (Blaze, created via console) · 9/9 images uploaded · public-read rules released via `firebase deploy --only storage` · verify: HTTP 200 + md5 match (113093 bytes) · public URL works without token |
 | **Fix path** | Console → Billing → Blaze upgrade → `node scripts/seed-firebase.mjs` re-run (bucket + upload auto) |
 | **Evidence** | `Evidence/firebase-migration.json` (full dump: collections, counts, verify, upload attempts, rules) |
 | **Bug found+fixed** | Run-1 me 63×400 (double-wrapped fields) → fix: top-level object unwrap → run-2 me 63/63 ✅ |

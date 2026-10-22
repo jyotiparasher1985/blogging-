@@ -1,6 +1,6 @@
 {
   "project": "blogging-5760b",
-  "createdAt": "2026-10-22T03:44:09.986Z",
+  "createdAt": "2026-10-22T10:45:46.132Z",
   "method": "firebase-tools OAuth (cloud-platform scope) → Firestore REST v1 + Firebase Storage v0 / GCS JSON API",
   "firestore": {
     "database": "projects/blogging-5760b/databases/(default)",
@@ -29,88 +29,113 @@
   },
   "storage": {
     "bucket": "blogging-5760b.firebasestorage.app",
-    "bucketStatus": "blocked (GCS route: 403 The billing account for the owning project is disabled in state absent)",
+    "bucketStatus": "existing (blogging-5760b.firebasestorage.app)",
     "rules": {
       "attempted": true,
-      "ok": false,
-      "ruleset": "projects/blogging-5760b/rulesets/28a3527f-36cd-41bc-8bd8-d9b7b15b0d9d",
-      "release": "Release projects/blogging-5760b/releases/firebase.storage already exists."
+      "ok": true,
+      "method": "firebase deploy --only storage (storage.rules)",
+      "release": "firebase.storage",
+      "publicRead": true
     },
     "files": [
       {
         "name": "img/ai-abstract.jpg",
         "size": 546457,
         "md5": "414711e3f57df9db2d544c3a40e5a0c1",
-        "ok": false,
-        "status": 404,
-        "downloadUrl": null
+        "ok": true,
+        "status": 200,
+        "generation": "1792665920176742",
+        "downloadToken": "c09f9f58-42a7-439c-be6f-91d86f93d361",
+        "downloadUrl": "https://firebasestorage.googleapis.com/v0/b/blogging-5760b.firebasestorage.app/o/img%2Fai-abstract.jpg?alt=media&token=c09f9f58-42a7-439c-be6f-91d86f93d361"
       },
       {
         "name": "img/dev-laptop.jpg",
         "size": 122436,
         "md5": "c59b85d786e3e5753268354fb07da764",
-        "ok": false,
-        "status": 404,
-        "downloadUrl": null
+        "ok": true,
+        "status": 200,
+        "generation": "1792665922731383",
+        "downloadToken": "a52c1a74-fe0c-458c-8dc0-8ee96279ec0a",
+        "downloadUrl": "https://firebasestorage.googleapis.com/v0/b/blogging-5760b.firebasestorage.app/o/img%2Fdev-laptop.jpg?alt=media&token=a52c1a74-fe0c-458c-8dc0-8ee96279ec0a"
       },
       {
         "name": "img/ghost-newsletters.jpg",
         "size": 167049,
         "md5": "c7650e5957aeb8b5ce2fd260f92feeac",
-        "ok": false,
-        "status": 404,
-        "downloadUrl": null
+        "ok": true,
+        "status": 200,
+        "generation": "1792665924859815",
+        "downloadToken": "18e2667a-6fdb-4135-8d8c-ad2a159902e6",
+        "downloadUrl": "https://firebasestorage.googleapis.com/v0/b/blogging-5760b.firebasestorage.app/o/img%2Fghost-newsletters.jpg?alt=media&token=18e2667a-6fdb-4135-8d8c-ad2a159902e6"
       },
       {
         "name": "img/headlines-paper.jpg",
         "size": 108301,
         "md5": "ec416e967e7f75846cfbd6c9a3e4a288",
-        "ok": false,
-        "status": 404,
-        "downloadUrl": null
+        "ok": true,
+        "status": 200,
+        "generation": "1792665927342252",
+        "downloadToken": "0abe3c5c-47f1-440c-be02-f99e0e90f335",
+        "downloadUrl": "https://firebasestorage.googleapis.com/v0/b/blogging-5760b.firebasestorage.app/o/img%2Fheadlines-paper.jpg?alt=media&token=0abe3c5c-47f1-440c-be02-f99e0e90f335"
       },
       {
         "name": "img/memberships-business.jpg",
         "size": 135050,
         "md5": "4fc21888f0f8094a2b0c975f51a01991",
-        "ok": false,
-        "status": 404,
-        "downloadUrl": null
+        "ok": true,
+        "status": 200,
+        "generation": "1792665930342340",
+        "downloadToken": "9cecbd87-3877-473a-8fd5-03fb36c43f64",
+        "downloadUrl": "https://firebasestorage.googleapis.com/v0/b/blogging-5760b.firebasestorage.app/o/img%2Fmemberships-business.jpg?alt=media&token=9cecbd87-3877-473a-8fd5-03fb36c43f64"
       },
       {
         "name": "img/niches-analytics.jpg",
         "size": 181499,
         "md5": "5bf1cf4d050fd42b185f22f9b2693c46",
-        "ok": false,
-        "status": 404,
-        "downloadUrl": null
+        "ok": true,
+        "status": 200,
+        "generation": "1792665933129572",
+        "downloadToken": "8bf83f65-efb8-41ae-a993-7b79e7ad93a9",
+        "downloadUrl": "https://firebasestorage.googleapis.com/v0/b/blogging-5760b.firebasestorage.app/o/img%2Fniches-analytics.jpg?alt=media&token=8bf83f65-efb8-41ae-a993-7b79e7ad93a9"
       },
       {
         "name": "img/platforms-writing.jpg",
         "size": 113093,
         "md5": "17add77d70092928ce1af666c504e230",
-        "ok": false,
-        "status": 404,
-        "downloadUrl": null
+        "ok": true,
+        "status": 200,
+        "generation": "1792665935404571",
+        "downloadToken": "75bf054a-fab4-4768-ae28-a8689a03546f",
+        "downloadUrl": "https://firebasestorage.googleapis.com/v0/b/blogging-5760b.firebasestorage.app/o/img%2Fplatforms-writing.jpg?alt=media&token=75bf054a-fab4-4768-ae28-a8689a03546f"
       },
       {
         "name": "img/seo-dashboard.jpg",
         "size": 120511,
         "md5": "2224bd1d293dd43b8d18520a9bfa23f1",
-        "ok": false,
-        "status": 404,
-        "downloadUrl": null
+        "ok": true,
+        "status": 200,
+        "generation": "1792665937350681",
+        "downloadToken": "c961a391-05a0-42e0-9163-41faa16b4cae",
+        "downloadUrl": "https://firebasestorage.googleapis.com/v0/b/blogging-5760b.firebasestorage.app/o/img%2Fseo-dashboard.jpg?alt=media&token=c961a391-05a0-42e0-9163-41faa16b4cae"
       },
       {
         "name": "img/wordpress-code.jpg",
         "size": 152137,
         "md5": "94afe2f5fdc0c72b715afada3cef0480",
-        "ok": false,
-        "status": 404,
-        "downloadUrl": null
+        "ok": true,
+        "status": 200,
+        "generation": "1792665939795118",
+        "downloadToken": "14d5d56a-043c-48b8-9c6e-d999b038dbb3",
+        "downloadUrl": "https://firebasestorage.googleapis.com/v0/b/blogging-5760b.firebasestorage.app/o/img%2Fwordpress-code.jpg?alt=media&token=14d5d56a-043c-48b8-9c6e-d999b038dbb3"
       }
     ],
-    "verify": null,
-    "consoleUrl": "https://console.firebase.google.com/project/blogging-5760b/storage"
+    "verify": {
+      "status": 200,
+      "md5Matches": true,
+      "publicUrl": "https://firebasestorage.googleapis.com/v0/b/blogging-5760b.firebasestorage.app/o/img%2Fplatforms-writing.jpg?alt=media",
+      "bytes": 113093
+    },
+    "consoleUrl": "https://console.firebase.google.com/project/blogging-5760b/storage",
+    "allOk": true
   }
 }
