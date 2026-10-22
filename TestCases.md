@@ -205,7 +205,7 @@
 | **Preconditions** | `NEWS` array me 6 fresh headlines (22 Oct 2026, 07:47 IST fetch) + `NEWS_SOURCE.fetchedAt` updated |
 | **Steps** | 1. `breaking ticker/BreakingTicker.jsx` me `items` ko NEWS objects support karna (string OR {headline,url,time,tag}) → 2. each item `<a target="_blank">` with `time` prefix + `:focus-visible` outline → 3. `Layout.jsx` me `<BreakingTicker items={NEWS} />` → 4. `index.css` me `.ticker-item` styles → 5. build + dev HMR verify |
 | **Expected** | 6 clickable links (`.ticker-item`) render, first href → NDTV article, `aria-hidden` removed (accessible), pause-on-hover + focus outline work |
-| **Evidence** | `Evidence/tc19-pre-ticker.png` (static 4-item ticker, before) · `Evidence/tc19-post-ticker.png` (live 6 breaking headlines, light) · `Evidence/tc19-post-ticker-dark.png` (dark mode) |
+| **Evidence** | `Evidence/tc19-pre-ticker.png` (static 4-item ticker, before) · `Evidence/tc19-post-ticker.png` (live 6 breaking headlines, light) · `Evidence/tc19-post-ticker-dark.png` (dark mode) · `Evidence/tc19-live-ticker.png` (production `blogging-5760b.web.app` — 6 NDTV links verified) |
 | **Result** | ✅ PASS (22 Oct 2026, dev `:5173`) — DOM-verified: `links: 6`, `firstHref: ndtv.com/...`, `hasTime: true`, `ariaHidden: null` |
 | **IP Rule (G12/G15)** | ❌ NDTV article text/photos copy NAHI · ✅ sirf headline titles + original article links + "via NDTV" credit |
 
