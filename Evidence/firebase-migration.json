@@ -1,6 +1,6 @@
 {
   "project": "blogging-5760b",
-  "createdAt": "2026-10-21T14:10:03.645Z",
+  "createdAt": "2026-10-22T03:44:09.986Z",
   "method": "firebase-tools OAuth (cloud-platform scope) → Firestore REST v1 + Firebase Storage v0 / GCS JSON API",
   "firestore": {
     "database": "projects/blogging-5760b/databases/(default)",
@@ -32,9 +32,9 @@
     "bucketStatus": "blocked (GCS route: 403 The billing account for the owning project is disabled in state absent)",
     "rules": {
       "attempted": true,
-      "ok": true,
-      "ruleset": "projects/blogging-5760b/rulesets/678a3ce5-7213-4f62-b1ca-02ad43726d37",
-      "release": "firebase.storage"
+      "ok": false,
+      "ruleset": "projects/blogging-5760b/rulesets/28a3527f-36cd-41bc-8bd8-d9b7b15b0d9d",
+      "release": "Release projects/blogging-5760b/releases/firebase.storage already exists."
     },
     "files": [
       {
